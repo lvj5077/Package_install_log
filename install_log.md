@@ -1,6 +1,7 @@
 # Ubuntu14.04.5
 
 ## sudo install
+	sudo passwd
 	sudo apt-get update
 	sudo apt-get remove libreoffice-common
 	sudo apt-get remove unity-webapps-common
@@ -98,6 +99,7 @@
 	rosmake lsd_slam
 
 ## librealsense
+	sudo apt-get install ros-indigo-rgbd-launch
 	sudo apt-get install libusb-1.0-0-dev pkg-config
 	./scripts/install_glfw3.sh
 	mkdir build && cd build
@@ -154,6 +156,12 @@
 
 ## install Ceres
 	sudo apt-get install liblapack-dev libsuitesparse-dev libcxsparse3.1.2 libgflags-dev libgoogle-glog-dev libgtest-dev
+	mkdir build
+	cd build
+	cmake ..
+
+## install g2o
+	sudo apt-get install libqt4-dev qt4-qmake libqglviewer-dev libsuitesparse-dev libcxsparse3.1.2
 	mkdir build
 	cd build
 	cmake ..
