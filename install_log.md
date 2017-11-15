@@ -32,6 +32,10 @@
 
 # 04/28/2017
 ## Pangolin
+	change for VM
+	“GLX_DOUBLEBUFFER , glx_doublebuffer ? True : False,”
+	to
+	“GLX_DOUBLEBUFFER , False, //glx_doublebuffer ? True : False,”
 	sudo apt-get install libglew-dev
 	git clone https://github.com/stevenlovegrove/Pangolin.git
 	cd Pangolin
