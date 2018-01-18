@@ -150,7 +150,7 @@
 	enable port permission: sudo gpasswd --add ${USER} dialout
 	install:	./configure 
 				make
-				make install
+				sudo make install
 
 # 07/26/2017
 ## install pcl
