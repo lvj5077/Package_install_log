@@ -1,0 +1,106 @@
+sudo apt remove libqglviewer-dev 
+
+sudo apt install libqglviewer-dev-qt4    
+cd /usr/lib/x86_64-linux-gnu    
+sudo ln -s libQGLViewer-qt4.so libQGLViewer.so
+
+
+sudo apt-get install espeak
+
+sudo apt-get install libglew-dev
+
+sudo gpasswd --add ${USER} dialout
+
+sudo apt-get install git
+sudo apt-get install libssl-dev
+sudo apt-get install libusb-1.0-0-dev pkg-config libgtk-3-dev
+sudo apt-get install libglfw3-dev
+
+
+for 3rdParty_ceres-solver
+
+LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
+
+SET(EIGEN_INCLUDE_DIR "/usr/include/eigen3")
+
+find_package(Eigen)
+message("Eigen found:::::::::::::: " ${EIGEN_VERSION} )
+make sure it is 3.2.0
+
+sudo apt-get install libgoogle-glog-dev libsuitesparse-dev liblapack-dev libblas-dev freeglut3-dev
+
+for 3rdParty_g2o
+
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated-declarations")
+
+
+slam2d_viewer.cpp g2o_qglviewer.cpp
+float to double zfar znear
+
+nano ~/.bashrc
+source /opt/ros/indigo/setup.bash
+source /home/robot/catkin_ws/devel/setup.bash
+export G2O_ROOT=/home/robot/3rdParty_g2o
+
+
+cmake ../ -DBUILD_EXAMPLES=true 
+
+sudo make uninstall && make clean && make -j8 && sudo make install
+
+
+realsense
+
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+
+sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+
+sudo apt-get update
+
+sudo apt-get install ros-kinetic-desktop-full
+sudo rosdep init
+rosdep update
+
+echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws/src/
+
+    Clone the latest Intel® RealSense™ ROS from here into 'catkin_ws/src/'
+
+catkin_init_workspace 
+cd ..
+catkin_make clean
+catkin_make -DCATKIN_ENABLE_TESTING=False -DCMAKE_BUILD_TYPE=Release
+catkin_make install
+echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+
+
+include_directories(${catkin_INCLUDE_DIRS})
+
+
+sudo /usr/include/boost/type_traits/detail/has_binary_operator.hpp
+
+
+namespace BOOST_JOIN(BOOST_TT_TRAIT_NAME,_impl) {
+
+..
+
+}
+
+to
+
+#ifndef Q_MOC_RUN
+namespace BOOST_JOIN(BOOST_TT_TRAIT_NAME,_impl) {
+#endif
+
+...
+
+#ifndef Q_MOC_RUN
+}
+#endif
+
+sudo apt-get install libvtk5-dev libvtk5-qt4-dev
+
+

@@ -1,0 +1,55 @@
+Your computer's name: robot 
+Pick a username: robot 
+Choose a password: robot (yes, it is a Short password) 
+Confirm your password: robot
+
+sudo apt-get update  
+sudo apt-get -y dist-upgrade
+
+sudo add-apt-repository ppa:ubilinux/up  
+sudo apt-get update  
+sudo apt-get -y install linux-upboard  
+sudo apt-get -y autoremove --purge 'linux-.*generic' 
+
+sudo reboot
+
+uname -r
+4.2.0-3-upboard
+
+
+sudo wget -q -O - https://bit.ly/en_krnl_src | sudo /bin/bash
+
+sudo add-apt-repository http://packages.ros.org/ros/ubuntu  
+sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 0xB01FA116  
+
+sudo apt-get update
+
+sudo apt -y install ros-indigo-desktop-full python-rosinstall ros-indigo-realsense-camera
+
+sudo rosdep init
+rosdep update
+
+echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+
+
+nano ~/.bashrc
+source /opt/ros/indigo/setup.bash
+source /home/robot/catkin_ws/devel/setup.bash
+export G2O_ROOT=/home/robot/3rdParty_g2o
+
+sudo nano /etc/udev/rules.d/99-usb-serial.rules
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ATTRS{serial}=="FTZ6SEMS", SYMLINK+="ttyIMU"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ATTRS{serial}=="FT0LDXOG", SYMLINK+="ttyMOTOR"
+
+sudo apt-get install libgflags-dev libgflags2
+
+sudo apt-get install libgoogle-glog-dev
+
+sudo apt-get update
+sudo apt-get install libqglviewer-dev
+
+sudo apt-get install espeak
+
+
+sudo apt-get install freeglut3 freeglut3-dev
